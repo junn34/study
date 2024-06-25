@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+void Recursive(int num)
+{
+	if (num <= 0)
+		return;
+	cout << "Recursive call! " << num << "\n";
+	Recursive(num - 1);
+}
+
+int main(void) {
+	Recursive(3);
+	return 0;
+}
+/* 재귀함수는 어려운 문제를 단순화하는데 사용됨 */
+
+/*Factorial 함수 */
+#include <iostream>
+using namespace std;
+int Factorial(int n)
+{
+	if (n == 0)
+		return 1;
+	else
+		return n * Factorial(n - 1);
+}
+int main(void) {
+	cout << "1! = " << Factorial(1) << "\n";
+	cout << "2! = " << Factorial(2) << "\n";
+	cout << "3! = " << Factorial(3) << "\n";
+
+	return 0;
+}
+/*피보나치 수열*/
+앞의 두수를 더해서 현재수를 만드는 수열
+#include <iostream>
+using namespace std;
+int Fibo(int n)
+{
+	if (n == 1)
+		return 0;
+	else if (n == 2)
+		return 1;
+	else
+		return Fibo(n - 1) + Fibo(n - 2);
+}
+int main(void) {
+	int i;
+	for (i = 1; i < 15; i++)
+		cout << Fibo(i);
+	return 0;
+}
